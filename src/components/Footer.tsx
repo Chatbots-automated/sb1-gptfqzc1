@@ -1,61 +1,92 @@
 import React from 'react';
+import { Sun, MapPin, Phone, Mail, Instagram, Facebook } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 text-white mt-12">
-      <div className="max-w-7xl mx-auto px-4 py-12">
+    <footer className="bg-gray-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-lg font-semibold mb-4">Customer Support</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="hover:text-gray-300 transition-colors">Contact Us</a></li>
-              <li><a href="#" className="hover:text-gray-300 transition-colors">FAQs</a></li>
-              <li><a href="#" className="hover:text-gray-300 transition-colors">Shipping Information</a></li>
-              <li><a href="#" className="hover:text-gray-300 transition-colors">Returns & Exchanges</a></li>
+            <div className="flex items-center space-x-2 mb-6">
+              <Sun className="h-8 w-8 text-elida-gold" />
+              <span className="font-playfair text-2xl font-bold text-elida-gold">ÉLIDA</span>
+            </div>
+            <p className="text-gray-400">
+              Aukščiausios kokybės soliariumai ir profesionalus aptarnavimas Panevėžyje.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-playfair text-lg font-semibold mb-4">Kontaktai</h3>
+            <ul className="space-y-3">
+              <li>
+                <a href="#" className="flex items-center text-gray-400 hover:text-elida-gold transition-colors">
+                  <MapPin className="h-5 w-5 mr-2" />
+                  Panevėžys, Lietuva
+                </a>
+              </li>
+              <li>
+                <a href="tel:+37060000000" className="flex items-center text-gray-400 hover:text-elida-gold transition-colors">
+                  <Phone className="h-5 w-5 mr-2" />
+                  +370 600 00000
+                </a>
+              </li>
+              <li>
+                <a href="mailto:info@elida.lt" className="flex items-center text-gray-400 hover:text-elida-gold transition-colors">
+                  <Mail className="h-5 w-5 mr-2" />
+                  info@elida.lt
+                </a>
+              </li>
             </ul>
           </div>
-          
+
           <div>
-            <h3 className="text-lg font-semibold mb-4">About Us</h3>
+            <h3 className="font-playfair text-lg font-semibold mb-4">Nuorodos</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-gray-300 transition-colors">Our Story</a></li>
-              <li><a href="#" className="hover:text-gray-300 transition-colors">Careers</a></li>
-              <li><a href="#" className="hover:text-gray-300 transition-colors">Store Locations</a></li>
-              <li><a href="#" className="hover:text-gray-300 transition-colors">Blog</a></li>
+              <li>
+                <Link to="/services" className="text-gray-400 hover:text-elida-gold transition-colors">
+                  Paslaugos
+                </Link>
+              </li>
+              <li>
+                <Link to="/gallery" className="text-gray-400 hover:text-elida-gold transition-colors">
+                  Galerija
+                </Link>
+              </li>
+              <li>
+                <Link to="/booking" className="text-gray-400 hover:text-elida-gold transition-colors">
+                  Rezervacijos
+                </Link>
+              </li>
             </ul>
           </div>
-          
+
           <div>
-            <h3 className="text-lg font-semibold mb-4">Legal</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="hover:text-gray-300 transition-colors">Terms & Conditions</a></li>
-              <li><a href="#" className="hover:text-gray-300 transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-gray-300 transition-colors">Cookie Policy</a></li>
-              <li><a href="#" className="hover:text-gray-300 transition-colors">Terms of Service</a></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Newsletter</h3>
-            <p className="text-gray-400 mb-4">Subscribe to receive updates, access to exclusive deals, and more.</p>
-            <form className="flex gap-2">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-2 rounded-md text-gray-900"
-              />
-              <button
-                type="submit"
-                className="bg-blue-600 px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
+            <h3 className="font-playfair text-lg font-semibold mb-4">Sekite Mus</h3>
+            <div className="flex space-x-4">
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 bg-gray-800 rounded-lg text-gray-400 hover:text-elida-gold transition-colors"
               >
-                Subscribe
-              </button>
-            </form>
+                <Instagram className="h-6 w-6" />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 bg-gray-800 rounded-lg text-gray-400 hover:text-elida-gold transition-colors"
+              >
+                <Facebook className="h-6 w-6" />
+              </a>
+            </div>
           </div>
         </div>
-        
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} OutdoorGear. All rights reserved.</p>
+
+        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+          <p>&copy; {new Date().getFullYear()} ÉLIDA. Visos teisės saugomos.</p>
         </div>
       </div>
     </footer>
