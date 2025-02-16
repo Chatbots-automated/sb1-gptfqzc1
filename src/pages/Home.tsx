@@ -13,29 +13,47 @@ export default function Home() {
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
-      <section className="relative h-screen">
-        <div className="absolute inset-0 bg-hero-pattern bg-cover bg-center">
-          <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
+      <section className="relative min-h-[90vh] lg:min-h-screen flex items-center">
+        <div className="absolute inset-0">
+          <img 
+            src="https://jp.lt/wp-content/uploads/2023/11/a36.jpg"
+            alt="ÉLIDA Soliariumai"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40" />
         </div>
-        <div className="relative h-full flex items-center justify-center text-center px-4">
+        <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-3xl"
+            className="max-w-2xl"
           >
-            <h1 className="font-playfair text-4xl md:text-6xl text-white mb-6">
-              Atrask Auksinį Įdegį Panevėžyje
+            <span className="inline-block px-4 py-2 bg-elida-gold/20 backdrop-blur-sm text-elida-gold rounded-full text-sm font-medium mb-6">
+              Premium Soliariumai Panevėžyje
+            </span>
+            <h1 className="font-playfair text-5xl md:text-7xl text-white mb-8 leading-tight">
+              Atrask Tobulą
+              <br />
+              <span className="text-elida-gold">Įdegį</span>
             </h1>
-            <p className="text-lg md:text-xl text-elida-beige mb-8">
-              Aukščiausios kokybės soliariumai su naujausiomis technologijomis
+            <p className="text-xl text-elida-beige mb-10 max-w-lg">
+              Aukščiausios kokybės soliariumai su naujausiomis technologijomis ir profesionaliu aptarnavimu
             </p>
-            <Link
-              to="/booking"
-              className="inline-block px-8 py-4 bg-elida-gold text-white rounded-full font-medium text-lg hover:bg-elida-accent transition-all duration-300 transform hover:scale-105 shadow-lg"
-            >
-              Rezervuoti Laiką
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                to="/booking"
+                className="inline-flex items-center justify-center px-8 py-4 bg-elida-gold text-white rounded-full font-medium text-lg hover:bg-elida-accent transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
+                Rezervuoti Laiką
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center justify-center px-8 py-4 bg-white/10 text-white backdrop-blur-sm rounded-full font-medium text-lg hover:bg-white/20 transition-all duration-300"
+              >
+                Mūsų Paslaugos
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>

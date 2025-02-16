@@ -59,6 +59,16 @@ export default function Footer() {
                   Rezervacijos
                 </Link>
               </li>
+              <li>
+                <a 
+                  href="https://jp.lt/panevezyje-pristatyta-nauja-soliariumu-studija-elida-svara-estetika-bronzinis-idegis1/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-elida-gold transition-colors"
+                >
+                  Apie mus
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -66,7 +76,7 @@ export default function Footer() {
             <h3 className="font-playfair text-lg font-semibold mb-4">Sekite Mus</h3>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.instagram.com/elidasoliariumai/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-gray-800 rounded-lg text-gray-400 hover:text-elida-gold transition-colors"
@@ -74,7 +84,7 @@ export default function Footer() {
                 <Instagram className="h-6 w-6" />
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/p/%C3%89LIDA-Soliariumai-61550964922132/?locale=lt_LT"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-gray-800 rounded-lg text-gray-400 hover:text-elida-gold transition-colors"
