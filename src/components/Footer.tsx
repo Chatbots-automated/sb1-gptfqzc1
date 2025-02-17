@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
             <div className="flex items-center space-x-2 mb-6">
               <Sun className="h-8 w-8 text-elida-gold" />
@@ -21,9 +21,14 @@ export default function Footer() {
             <h3 className="font-playfair text-lg font-semibold mb-4">Kontaktai</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="flex items-center text-gray-400 hover:text-elida-gold transition-colors">
+                <a 
+                  href="https://goo.gl/maps/YQZgXZsKZYn7RKZP6" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="flex items-center text-gray-400 hover:text-elida-gold transition-colors"
+                >
                   <MapPin className="h-5 w-5 mr-2" />
-                  Panevėžys, Lietuva
+                  Vilniaus g. 23A, Panevėžys
                 </a>
               </li>
               <li>
@@ -74,7 +79,7 @@ export default function Footer() {
 
           <div>
             <h3 className="font-playfair text-lg font-semibold mb-4">Sekite Mus</h3>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 mb-6">
               <a
                 href="https://www.instagram.com/elidasoliariumai/"
                 target="_blank"
@@ -95,7 +100,20 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+        {/* Google Maps Section */}
+        <div className="w-full rounded-xl overflow-hidden shadow-lg mb-12 bg-gray-800">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2246.0371095206456!2d24.35046937689661!3d55.73399997986656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e632778d629891%3A0x1b2b3be71c668e76!2sVilniaus%20g.%2023A%2C%20Panev%C4%97%C5%BEys%2035157!5e0!3m2!1sen!2slt!4v1709824037410!5m2!1sen!2slt"
+            width="100%"
+            height="400"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
+
+        <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
           <p>&copy; {new Date().getFullYear()} ÉLIDA. Visos teisės saugomos.</p>
         </div>
       </div>
