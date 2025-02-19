@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, LogIn, LogOut, Sun, ExternalLink } from 'lucide-react';
+import { Menu, X, LogIn, LogOut, ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useAuth } from '../context/AuthContext';
 
@@ -44,14 +44,13 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <Link to="/" className="flex items-center space-x-2 group">
-            <Sun className={`h-8 w-8 transition-all duration-300 ${
-              isScrolled ? 'text-elida-gold' : 'text-white group-hover:text-elida-gold'
-            }`} />
-            <span className={`font-playfair text-2xl font-bold transition-all duration-300 ${
-              isScrolled ? 'text-gray-900' : 'text-white group-hover:text-elida-gold'
-            }`}>
-              ÉLIDA
-            </span>
+            <img 
+              src="/logo.png" 
+              alt="ÉLIDA" 
+              className={`h-8 transition-opacity duration-300 ${
+                isScrolled ? 'opacity-100' : 'opacity-100 filter brightness-0 invert'
+              }`}
+            />
           </Link>
 
           {/* Desktop Navigation */}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sun, MapPin, Phone, Mail, Instagram, Facebook } from 'lucide-react';
+import { MapPin, Phone, Mail, Instagram, Facebook } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
@@ -9,8 +9,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
             <div className="flex items-center space-x-2 mb-6">
-              <Sun className="h-8 w-8 text-elida-gold" />
-              <span className="font-playfair text-2xl font-bold text-elida-gold">ÉLIDA</span>
+              <img 
+                src="/logo.png" 
+                alt="ÉLIDA" 
+                className="h-8 filter brightness-0 invert"
+              />
             </div>
             <p className="text-gray-400">
               Aukščiausios kokybės soliariumai ir profesionalus aptarnavimas Panevėžyje.
